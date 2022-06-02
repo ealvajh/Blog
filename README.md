@@ -14,7 +14,7 @@ git branch -M main
 git push -u origin main
 
 
-##DbFirst
+## DbFirst
 Pasos para crear una app .Net Core Web Api:
 
 1. Crear app
@@ -27,7 +27,7 @@ Pasos para crear una app .Net Core Web Api:
 Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 
-##CodeFirst
+## CodeFirst
 1. Agregar paquetes EntityFrameworkCore
 	- .Desing (Migrations)
 	- SqlServer 
@@ -37,6 +37,6 @@ Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_C
 4. Agregar cadena de conexión a `appsettings.json` -> ConnectionStrings > DefaultConnection.
 5. Registrar `DataContext` en Program.cs.
 
-`dotnet too install --global dotnet-ef (Optional)
-dotnet-ef migrations add CreateInitial
-dotnet-ef database update`
+`	dotnet too install --global dotnet-ef (Optional)
+	dotnet-ef migrations add CreateInitial
+	dotnet-ef database update`
