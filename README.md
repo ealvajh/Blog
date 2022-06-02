@@ -36,7 +36,7 @@ Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_C
 3. Agregar DbSet<> por c/tabla.
 4. Agregar cadena de conexión a `appsettings.json` -> ConnectionStrings > DefaultConnection.
 5. Registrar `DataContext` en Program.cs.
-
-`	dotnet too install --global dotnet-ef (Optional)
-	dotnet-ef migrations add CreateInitial
-	dotnet-ef database update`
+6. Migrar
+`dotnet too install --global dotnet-ef (Optional)`
+	`dotnet-ef migrations add CreateInitial`	
+	`dotnet-ef database update`	
