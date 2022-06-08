@@ -20,11 +20,15 @@ Pasos para crear una app .Net Core Web Api:
 1. Crear app
 2. agregar paquetes mediante nuget
 	
-	Install-Package Microsoft.EntityFrameworkCore.Tools
-	Install-Package Microsoft.EntityFrameworkCore.SqlServer
+	-	Install-Package Microsoft.EntityFrameworkCore.Tools
+	-	Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 3. Generar models
-Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+	`Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models` 
+	
+	`dotnet ef dbcontext scaffold "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models`
+
 
 
 ## CodeFirst
@@ -38,8 +42,8 @@ Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=OnlineStore;Trusted_C
 5. Registrar `DataContext` en Program.cs.
 6. Migrar:
 
-`dotnet too install --global dotnet-ef (Optional)`  
+	`dotnet too install --global dotnet-ef (Optional)`  
 	
-`dotnet-ef migrations add CreateInitial`  	
+	`dotnet-ef migrations add CreateInitial`  	
 	
-`dotnet-ef database update`  	
+	`dotnet-ef database update`  	
